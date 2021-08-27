@@ -5,7 +5,7 @@
 .DS_Store
 
 # config
-config.plist
+TheMovieDB/config.plist
 
 ## User settings
 xcuserdata/
