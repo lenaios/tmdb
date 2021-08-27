@@ -15,7 +15,6 @@
 		D0858CAA26D94FAA00ED4FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0858CA826D94FAA00ED4FDB /* LaunchScreen.storyboard */; };
 		D0858CB526D94FAA00ED4FDB /* TheMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0858CB426D94FAA00ED4FDB /* TheMovieDBTests.swift */; };
 		D0858CC026D94FAA00ED4FDB /* TheMovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0858CBF26D94FAA00ED4FDB /* TheMovieDBUITests.swift */; };
-		D0858CD026D9505800ED4FDB /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0858CCF26D9505800ED4FDB /* config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		D0858CBB26D94FAA00ED4FDB /* TheMovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0858CBF26D94FAA00ED4FDB /* TheMovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITests.swift; sourceTree = "<group>"; };
 		D0858CC126D94FAA00ED4FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0858CCF26D9505800ED4FDB /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 				D0858CA626D94FAA00ED4FDB /* Assets.xcassets */,
 				D0858CA826D94FAA00ED4FDB /* LaunchScreen.storyboard */,
 				D0858CAB26D94FAA00ED4FDB /* Info.plist */,
-				D0858CCF26D9505800ED4FDB /* config.plist */,
 			);
 			path = TheMovieDB;
 			sourceTree = "<group>";
@@ -250,7 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0858CD026D9505800ED4FDB /* config.plist in Resources */,
 				D0858CAA26D94FAA00ED4FDB /* LaunchScreen.storyboard in Resources */,
 				D0858CA726D94FAA00ED4FDB /* Assets.xcassets in Resources */,
 				D0858CA526D94FA800ED4FDB /* Main.storyboard in Resources */,
