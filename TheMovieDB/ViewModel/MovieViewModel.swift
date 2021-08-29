@@ -11,4 +11,6 @@ struct MovieViewModel {
   let title: String
   let overview: String
   let poster: String
+  let rate: String
+  let genre: [String]
 }

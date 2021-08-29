@@ -18,6 +18,7 @@ class MoviesViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    moviesTableView.rowHeight = 120
     moviesTableView.dataSource = self
     
     setupSearchController()
@@ -58,27 +59,5 @@ extension MoviesViewController: UITableViewDataSource {
     let item = moviesViewModel.items.value[indexPath.row]
     cell.fill(item)
     return cell
-  }
-}
-
-final class MovieTableViewCell: UITableViewCell {
-  @IBOutlet weak var title: UILabel!
-  @IBOutlet weak var overview: UILabel!
-  
-  let repository = DefaultMoviePosterRepository(networkService: DefaultNetworkService())
-  
-  func fill(_ item: MovieViewModel) {
-    repository.fetch(image: item.poster) { result in
-      switch result {
-      case .success(let data):
-        DispatchQueue.main.async {
-          self.imageView?.image = UIImage(data: data)
-        }
-      case .failure(let error):
-        print(error.localizedDescription)
-      }
-    }
-    self.title.text = item.title
-    self.overview.text = item.overview
   }
 }

@@ -24,7 +24,6 @@ final class DefaultMovieRepository: MovieRepository {
     let endpoint = Endpoint(path: "/3/search/movie", query: [query, apiKey])
     let request = URLRequest(url: endpoint.url)
     let decoder = JSONDecoder()
-    decoder.keyDecodingStrategy = .convertFromSnakeCase
     networkService.request(request) { result in
       switch result {
       case .success(let data):

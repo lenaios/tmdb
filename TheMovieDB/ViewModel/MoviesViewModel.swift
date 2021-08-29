@@ -20,8 +20,15 @@ class MoviesViewModel {
     movieSearchUseCase.search(query: query) { result in
       switch result {
       case .success(let moviesPage):
-        self.items.value = moviesPage.results.map { movie in
-          MovieViewModel(title: movie.title, overview: movie.overview, poster: movie.posterPath)
+        self.items.value = moviesPage.movies.map { movie in
+          MovieViewModel(
+            title: movie.title,
+            overview: movie.overview,
+            poster: movie.poster,
+            rate: "\(movie.average)",
+            genre: movie.genre.compactMap({ id in
+              id.description
+            }))
         }
       case .failure(let error):
         fatalError(error.localizedDescription)
