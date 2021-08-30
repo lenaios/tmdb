@@ -13,7 +13,7 @@ class MoviesViewController: UIViewController {
   
   private let searchViewController = UISearchController(searchResultsController: nil)
   
-  let moviesViewModel = MoviesViewModel(movieSearchUseCase: DefaultMovieSearchUseCase(movieRepository: DefaultMovieRepository(networkService: DefaultNetworkService())))
+  @Dependency var moviesViewModel: MoviesViewModel
   
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -13,7 +13,7 @@ final class MovieTableViewCell: UITableViewCell {
   @IBOutlet weak var subtitle: UILabel!
   @IBOutlet weak var rate: UILabel!
   
-  let repository = DefaultMoviePosterRepository(networkService: DefaultNetworkService())
+  @Dependency var repository: DefaultMoviePosterRepository
   
   func fill(_ item: MovieViewModel) {
     repository.fetch(image: item.poster) { result in

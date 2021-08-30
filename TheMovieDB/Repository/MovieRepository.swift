@@ -47,8 +47,8 @@ final class DefaultMovieRepository: MovieRepository {
     else {
       fatalError()
     }
-    let apiKey = config["API_KEY"]
-    return apiKey!
+    let key = config["API_KEY"]
+    return key!
   }
 }
 
