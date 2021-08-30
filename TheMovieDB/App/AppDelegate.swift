@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func setupDependency() {
     let networkService = DefaultNetworkService()
     let movieRepository = DefaultMovieRepository(networkService: networkService)
-    let moviePosterRepository = DefaultMoviePosterRepository(networkService: networkService)
+    let posterImageCache = PosterImageCache()
+    let moviePosterRepository = DefaultMoviePosterRepository(networkService: networkService, cache: posterImageCache)
     let movieSearchUseCase = DefaultMovieSearchUseCase(movieRepository: movieRepository)
     let moviesViewModel = MoviesViewModel(movieSearchUseCase: movieSearchUseCase)
     

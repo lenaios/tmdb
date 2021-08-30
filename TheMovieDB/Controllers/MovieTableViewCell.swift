@@ -16,11 +16,13 @@ final class MovieTableViewCell: UITableViewCell {
   @Dependency var repository: DefaultMoviePosterRepository
   
   func fill(_ item: MovieViewModel) {
-    repository.fetch(image: item.poster) { result in
+    let url = URL(string: item.poster)!
+    let image = url.lastPathComponent
+    repository.fetch(image: image) { result in
       switch result {
       case .success(let data):
         DispatchQueue.main.async {
-          self.imageView?.image = UIImage(data: data)
+          self.poster.image = UIImage(data: data)
         }
       case .failure(let error):
         print(error.localizedDescription)

@@ -30,6 +30,7 @@
 		D0DB6E1526DB689200CF0802 /* MoviesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB6E1426DB689200CF0802 /* MoviesPage.swift */; };
 		D0DB6E1726DBC7BB00CF0802 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB6E1626DBC7BB00CF0802 /* DIContainer.swift */; };
 		D0DB6E1926DBC8D100CF0802 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB6E1826DBC8D100CF0802 /* AppCoordinator.swift */; };
+		D0DB6E1B26DD554300CF0802 /* PosterImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB6E1A26DD554300CF0802 /* PosterImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D0DB6E1426DB689200CF0802 /* MoviesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPage.swift; sourceTree = "<group>"; };
 		D0DB6E1626DBC7BB00CF0802 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		D0DB6E1826DBC8D100CF0802 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D0DB6E1A26DD554300CF0802 /* PosterImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			children = (
 				D0858CE426DA475E00ED4FDB /* MovieRepository.swift */,
 				D0858CEF26DB518A00ED4FDB /* MoviePosterRepository.swift */,
+				D0DB6E1A26DD554300CF0802 /* PosterImageCache.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				D0858CA226D94FA800ED4FDB /* MoviesViewController.swift in Sources */,
 				D0858CE226DA3AEA00ED4FDB /* MovieSearchUseCase.swift in Sources */,
 				D0858CE826DA664B00ED4FDB /* MoviesViewModel.swift in Sources */,
+				D0DB6E1B26DD554300CF0802 /* PosterImageCache.swift in Sources */,
 				D0858CDF26DA392B00ED4FDB /* Movie.swift in Sources */,
 				D0858CF026DB518A00ED4FDB /* MoviePosterRepository.swift in Sources */,
 				D0858CEB26DA9D7E00ED4FDB /* Observable.swift in Sources */,
