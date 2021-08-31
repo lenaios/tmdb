@@ -11,6 +11,8 @@ class MoviesViewController: UIViewController {
 
   @IBOutlet weak var moviesTableView: UITableView!
   
+  weak var coordinator: Coordinator?
+  
   private let searchViewController = UISearchController(searchResultsController: nil)
   
   @Dependency var moviesViewModel: MoviesViewModel
@@ -20,6 +22,7 @@ class MoviesViewController: UIViewController {
     
     moviesTableView.rowHeight = 120
     moviesTableView.dataSource = self
+    moviesTableView.delegate = self
     
     setupSearchController()
     bindUI()
@@ -59,5 +62,14 @@ extension MoviesViewController: UITableViewDataSource {
     let item = moviesViewModel.items.value[indexPath.row]
     cell.fill(item)
     return cell
+  }
+}
+
+extension MoviesViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: false)
+    let movie = moviesViewModel.item(for: indexPath.item)
+    guard let coordinator = coordinator as? DefaultCoordinator else { return }
+    coordinator.showMovieDetail(movie: movie)
   }
 }

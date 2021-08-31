@@ -107,6 +107,48 @@
             </objects>
             <point key="canvasLocation" x="802.89855072463774" y="109.82142857142857"/>
         </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="i5I-NO-YGv">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewController" id="Uxl-S7-oLx" customClass="MovieDetailViewController" customModule="TheMovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LgS-1y-ZcS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0E8-v2-6p0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0E8-v2-6p0" secondAttribute="height" multiplier="15:8" id="zBB-lc-6gg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfG-IR-deB">
+                                <rect key="frame" x="10" y="275" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ao1-8u-ahQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ao1-8u-ahQ" firstAttribute="trailing" secondItem="0E8-v2-6p0" secondAttribute="trailing" id="ENa-Sp-fbc"/>
+                            <constraint firstItem="ao1-8u-ahQ" firstAttribute="trailing" secondItem="vfG-IR-deB" secondAttribute="trailing" constant="10" id="Mtv-F9-8DT"/>
+                            <constraint firstItem="0E8-v2-6p0" firstAttribute="top" secondItem="ao1-8u-ahQ" secondAttribute="top" id="dG6-U7-HUW"/>
+                            <constraint firstItem="vfG-IR-deB" firstAttribute="top" secondItem="0E8-v2-6p0" secondAttribute="bottom" constant="10" id="ulc-Zw-9Gx"/>
+                            <constraint firstItem="vfG-IR-deB" firstAttribute="leading" secondItem="ao1-8u-ahQ" secondAttribute="leading" constant="10" id="wKI-2T-oKz"/>
+                            <constraint firstItem="0E8-v2-6p0" firstAttribute="leading" secondItem="ao1-8u-ahQ" secondAttribute="leading" id="xrx-NT-sy6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qin-1K-dw0"/>
+                    <connections>
+                        <outlet property="overview" destination="vfG-IR-deB" id="ARB-9h-A2S"/>
+                        <outlet property="poster" destination="0E8-v2-6p0" id="Ekw-yT-L3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kq1-ds-Peh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517" y="110"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

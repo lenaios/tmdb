@@ -15,7 +15,7 @@ final class MovieTableViewCell: UITableViewCell {
   
   @Dependency var repository: DefaultMoviePosterRepository
   
-  func fill(_ item: MovieViewModel) {
+  func fill(_ item: MovieItemViewModel) {
     let url = URL(string: item.poster)!
     let image = url.lastPathComponent
     repository.fetch(image: image) { result in

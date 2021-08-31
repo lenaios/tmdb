@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct MovieViewModel {
+struct MovieItemViewModel {
   let title: String
-  let overview: String
   let poster: String
   let rate: String
   let genre: [String]

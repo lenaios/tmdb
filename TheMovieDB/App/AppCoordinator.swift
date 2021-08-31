@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol Coordinator {
+protocol Coordinator: AnyObject {
   func start()
 }
 
@@ -19,9 +19,14 @@ class DefaultCoordinator: Coordinator {
   }
   
   func start() {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let identifier = String(describing: MoviesViewController.self)
-    let view = storyboard.instantiateViewController(withIdentifier: identifier)
+    let view: MoviesViewController = MoviesViewController.instantiate()
+    view.coordinator = self
+    navigation.pushViewController(view, animated: true)
+  }
+  
+  func showMovieDetail(movie: Movie) {
+    let view: MovieDetailViewController = MovieDetailViewController.instantiate()
+    view.movie = MovieDetailViewModel(movie: movie)
     navigation.pushViewController(view, animated: true)
   }
 }

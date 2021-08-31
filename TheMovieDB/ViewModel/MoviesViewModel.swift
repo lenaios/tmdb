@@ -10,7 +10,9 @@ import Foundation
 class MoviesViewModel {
   let movieSearchUseCase: MovieSearchUseCase
   
-  var items = Observable<[MovieViewModel]>(value: [])
+  private var movies: [Movie] = []
+  
+  var items = Observable<[MovieItemViewModel]>(value: [])
   
   init(movieSearchUseCase: MovieSearchUseCase) {
     self.movieSearchUseCase = movieSearchUseCase
@@ -20,10 +22,10 @@ class MoviesViewModel {
     movieSearchUseCase.search(query: query) { result in
       switch result {
       case .success(let moviesPage):
+        self.movies = moviesPage.movies
         self.items.value = moviesPage.movies.map { movie in
-          MovieViewModel(
+          MovieItemViewModel(
             title: movie.title,
-            overview: movie.overview,
             poster: movie.poster,
             rate: "\(movie.average)",
             genre: movie.genre.compactMap({ id in
@@ -34,5 +36,13 @@ class MoviesViewModel {
         fatalError(error.localizedDescription)
       }
     }
+  }
+  
+//  func item(for indexPath: Int) -> MovieViewModel {
+//    items.value[indexPath]
+//  }
+  
+  func item(for indexPath: Int) -> Movie {
+    movies[indexPath]
   }
 }

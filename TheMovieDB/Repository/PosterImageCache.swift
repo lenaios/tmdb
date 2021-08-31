@@ -35,9 +35,7 @@ class PosterImageCache: ImageCache {
     do {
       try data.write(to: path)
     } catch {
-      #if DEBUG
-      print("Fail to save")
-      #endif
+      printIfDebug("Fail to image save")
     }
   }
 }
