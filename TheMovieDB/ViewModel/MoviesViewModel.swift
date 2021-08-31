@@ -38,10 +38,6 @@ class MoviesViewModel {
     }
   }
   
-//  func item(for indexPath: Int) -> MovieViewModel {
-//    items.value[indexPath]
-//  }
-  
   func item(for indexPath: Int) -> Movie {
     movies[indexPath]
   }
